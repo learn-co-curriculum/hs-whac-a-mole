@@ -9,7 +9,7 @@ level: intermediate
 
 ## Objectives
 
-You'll be building whac-a-mole game, [demo here](http://kthffmn.github.io/whac-a-mole/). The HTML and CSS has already been completed for you, so your only job will be to add JavaScript code to two files, `game-functions.js` and `game.js`, found in your `public/javascripts/` folder.
+You'll be building a whac-a-mole game, [demo here](http://kthffmn.github.io/whac-a-mole/) today. The HTML and CSS has already been completed for you, so your only job will be to add JavaScript code to two files, `game-functions.js` and `game.js`, found in your `public/javascripts/` folder.
 
 ## Instructions
 This lab is Jasmine tested so you'll be running `learn` (terminal format) or `learn -b` (HTML format) from the root of the directory to see where your code is at.
@@ -25,17 +25,16 @@ The instructions are split into four sections:
 
 * Open up index.html in your browser.
 * Open up the JavaScript console in your browser (`command ⌘` + `option` + `J`). The `index.html` page has already loaded jQuery so go ahead and type `$("#mole-num-1").show();` into the console. Notice what happens.
-* Now take `$("#mole-num-5").show();`. What do you think will happen? Run the code. Notice that every mole has a number, starting with 1 and ending with 9.
+* Now do `$("#mole-num-5").show();`. What do you think will happen? Run the code. Notice that every mole has a number, starting with 1 and ending with 9.
 * Let's make the animations look a bit better. The jQuery UI library is also included in this lab, to learn more about it, read about it [here](http://api.jqueryui.com/).
   * Instead of just calling `show` with no arguments, let's call show with two arguments: the effect we want, in this case slide, and an options argument that specifies direction.
   * Type `$("#mole-num-2").show("slide", { direction: 'down' });` into the JS console in your browser. Better, right?
   * You can read up on the show function [here](http://api.jqueryui.com/show).
   * See if you can get the moles to disappear by making them slide down. The syntax will be very similar to the `show` with arguments syntax. For a hint, take a look at [jQuery's hide() function](http://api.jqueryui.com/hide/).
-* Now it's time to try and increment the score. Run `var score = $("#counter").text()` in your JS console. Type `score` into your console. Is it a number or a string? How would you add one to it? For help converting a string to a number, take a look at the [parseInt function](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/parseInt).
 
 ### Generate a Random Number
 
-In Ruby, it's pretty straightforward to generate a random number. For instance, to get the effect of a dice roll, you could just call `rand(1..6)` or `rand(5) + 1`. JavaScript, however, does not have a built out random integer function so you'll be building one out. It will help you choose a new mole to make appear.
+JavaScript does not have a built out random integer function so you'll be building one out. It will help you choose a new mole to make appear.
 
 Add code to the `randomInt()` function, found in your `game-functions.js` file. This function should accept two arguments, a minimum and a maxium, and return a random number between and including them. We'll be using this function to choose which mole to call on later.
 
@@ -69,11 +68,7 @@ This function is tested by the second and third Jasmine tests so run `learn`/`le
 
 ### Increment the Score
 
-Every time a user manages to click on a mole before it disappears, you should reward them by incrementing the score by one.
-
-Within the `$(document).ready` function in `game.js`, add a click handler for all divs that match the class "mole". Within this click handler, you'll want to hide the mole that was clicked and increment the score.
-
-This function is tested by Capybara so run `rspec` to see where you're at.
+Every time a user manages to click on a mole before it disappears, you should reward them by incrementing the score by one. We've already create a score variable in game.js to keep track of the score. Now you need to add a click handler for all divs that match the class "mole". Within this click handler, you'll want to hide the mole that was clicked, increment the score and display the update score in the score div.
 
 Hints:
 * Think back to the DOM manipulation section if you want to remember how to fetch the value of the score.
