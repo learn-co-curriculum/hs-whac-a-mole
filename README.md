@@ -12,9 +12,6 @@ level: intermediate
 You'll be building whac-a-mole game, [demo here](http://kthffmn.github.io/whac-a-mole/). The HTML and CSS has already been completed for you, so your only job will be to add JavaScript code to two files, `game-functions.js` and `game.js`, found in your `public/javascripts/` folder.
 
 ## Instructions
-
-Before getting started, remember to run `bundle install` from the root of the directory. 
-
 This lab is Jasmine tested so you'll be running `learn` (terminal format) or `learn -b` (HTML format) from the root of the directory to see where your code is at.
 
 The instructions are split into four sections:
@@ -26,7 +23,7 @@ The instructions are split into four sections:
 
 ### Manipulate the DOM
 
-* Run `shotgun` or `rackup` from the command line and visit [localhost:9292](http://localhost:9292/) or [localhost:9393](http://localhost:9292/) respectively.
+* Open up index.html in your browser.
 * Open up the JavaScript console in your browser (`command ⌘` + `option` + `J`). The `index.html` page has already loaded jQuery so go ahead and type `$("#mole-num-1").show();` into the console. Notice what happens.
 * Now take `$("#mole-num-5").show();`. What do you think will happen? Run the code. Notice that every mole has a number, starting with 1 and ending with 9.
 * Let's make the animations look a bit better. The jQuery UI library is also included in this lab, to learn more about it, read about it [here](http://api.jqueryui.com/).
@@ -74,7 +71,7 @@ This function is tested by the second and third Jasmine tests so run `learn`/`le
 
 Every time a user manages to click on a mole before it disappears, you should reward them by incrementing the score by one.
 
-Within the `$(document).ready` function in `game.js`, add a click handler for all divs that match the class "mole". Within this click handler, you'll want to hide the mole that was clicked and increment the score. 
+Within the `$(document).ready` function in `game.js`, add a click handler for all divs that match the class "mole". Within this click handler, you'll want to hide the mole that was clicked and increment the score.
 
 This function is tested by Capybara so run `rspec` to see where you're at.
 
