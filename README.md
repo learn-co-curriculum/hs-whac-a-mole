@@ -76,3 +76,5 @@ Hints:
 * [jQuery UI Docs](http://api.jqueryui.com/)- [.show()](http://api.jqueryui.com/show/)
 * [jQuery Docs](http://api.jquery.com/) - [.on()](http://api.jquery.com/on/)
 * [jQuery Docs](http://api.jquery.com/) - [.text()](http://api.jquery.com/text/)
+
+<a href='https://learn.co/lessons/hs-whac-a-mole' data-visibility='hidden'>View this lesson on Learn.co</a>
