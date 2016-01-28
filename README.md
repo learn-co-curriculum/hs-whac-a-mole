@@ -77,4 +77,4 @@ Hints:
 * [jQuery Docs](http://api.jquery.com/) - [.on()](http://api.jquery.com/on/)
 * [jQuery Docs](http://api.jquery.com/) - [.text()](http://api.jquery.com/text/)
 
-<a href='https://learn.co/lessons/hs-whac-a-mole' data-visibility='hidden'>View this lesson on Learn.co</a>
+<p data-visibility='hidden'>View <a href='https://learn.co/lessons/hs-whac-a-mole' title='Whac A Mole :hammer:'>Whac A Mole :hammer:</a> on Learn.co and start learning to code for free.</p>
